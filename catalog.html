@@ -26,16 +26,22 @@
             <legend>Инфраструктура:</legend>
             <ul>
               <li>
-                <input type="checkbox">
-                БАССЕЙН
+                <label>
+                  <input type="checkbox">
+                  БАССЕЙН
+                </label>
               </li>
               <li>
-                <input type="checkbox">
-                ПАРКОВКА
+                <label>
+                  <input type="checkbox">
+                  ПАРКОВКА
+                </label>
               </li>
               <li>
-                <input type="checkbox">
-                Wi-Fi
+                <label>
+                  <input type="checkbox">
+                  Wi-Fi
+                </label>
               </li>
             </ul>
           </fildset>
@@ -58,9 +64,12 @@
           </fildset>
           <fildset>
             <legend>Стоимость в сутки:</legend>
-              <input type="number" name="min" placeholder="от О">
-              <input type="number" name="max" placeholder="от 3000">
-              <input type="range" min="0" max="4000" step="100" value="3000">
+              <label for="min"></label>
+              <input type="number" name="min" id="min" placeholder="от О">
+              <label for="max"></label>
+              <input type="number" name="max" id="max" placeholder="от 3000">
+              <label for="range"></label>
+              <input type="range" name="range" id="range" min="0" max="4000" step="100" value="3000">
           </fildset>
           <button class="button filter-button" type="submit" name="button">Показать</button>
         </form>
@@ -86,7 +95,7 @@
           <a class="button catalog-item-button catalog-item-button-detail" href="#">Подробнее</a>
           <a class="button catalog-item-button catalog-item-button-booking" href="#">Забронировать</a>
           <div>
-            <img src="img/rating-stars-5" alt="5 звёзд"></img>
+            <img src="img/rating-stars-5" alt="5 звёзд">
             <span>Рейтинг: 8,5</span>
           </div>
         </article>
@@ -110,7 +119,7 @@
           <a class="button catalog-item-button catalog-item-button-detail" href="#">Подробнее</a>
           <a class="button catalog-item-button catalog-item-button-booking" href="#">Забронировать</a>
           <div>
-            <img src="img/rating-stars-3" alt="3 звезды"></img>
+            <img src="img/rating-stars-3" alt="3 звезды">
             <span>Рейтинг: 9,2</span>
           </div>
         </article>
