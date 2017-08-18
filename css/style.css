@@ -8,7 +8,6 @@ h1 {
   line-height: 28px;
 }
 
-
 h2 {
   line-height: 21px;
   font-size: 21px;
@@ -19,4 +18,51 @@ h3 {
   font-size: 21px;
   font-weight: bold;
   line-height: 26px;
+}
+
+.visually-hidden {
+	position: absolute;
+	overflow: hidden;
+	clip: rect(0 0 0 0);
+	height: 1px;
+	width: 1px;
+	margin: -1px;
+	padding: 0;
+	border: 0;
+}
+
+.htmlacademy {
+  background-image: url("../img/htmlacademy.png");
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.social-buttons {
+  width: 48px;
+  height: 46px;
+  background-color: #7ab2d3;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.twitter {
+  background-image: url("../img/twitter.svg");
+}
+
+.facebook {
+  background-image: url("../img/fb-icon.svg");
+}
+
+.youtube {
+  background-image: url("../img/youtube.svg");
+}
+
+a:hover,
+a:focus {
+  color: brown;
+}
+
+button:hover,
+button:focus {
+  color: brown;
 }

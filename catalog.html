@@ -3,24 +3,24 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Седона. Каталог</title>
-    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
   </head>
   <body>
     <header class="main-header">
       <nav class="main-navigation">
         <ul class="site-navigation">
-          <li><a href="">ИНФОРМАЦИЯ</a></li>
-          <li><a href="">ФОТО И ВИДЕО</a></li>
-          <li><a href=""><img src="img/logo.png" alt="Sedona-logo"></a></li>
-          <li><a href="">КАРТА ШТАТА</a></li>
-          <li><a href="">ГОСТИНИЦЫ</a></li>
+          <li><a href="#">ИНФОРМАЦИЯ</a></li>
+          <li><a href="#">ФОТО И ВИДЕО</a></li>
+          <li><a href="index.html"><img src="img/logo.png" alt="Sedona-logo"><p class="visually-hidden">Sedona</p></a></li>
+          <li><a href="#">КАРТА ШТАТА</a></li>
+          <li><a href="#">ГОСТИНИЦЫ</a></li>
         </ul>
       </nav>
     </header>
     <main class="container">
-      <h1 class="visualy-hidden">Отели Седоны</h1>
+      <h1 class="visually-hidden">Отели Седоны</h1>
       <section class="filter">
-        <h2 class="visualy-hidden">Подбор отеля</h2>
+        <h2 class="visually-hidden">Подбор отеля</h2>
         <form class="filter-hotel" action="https://echo.htmlacademy.ru" method="get">
           <fildset>
             <legend>Инфраструктура:</legend>
@@ -49,16 +49,22 @@
             <legend>Тип жилья:</legend>
             <ul>
               <li>
-                <input type="checkbox">
-                Гостиница
+                <label>
+                  <input type="checkbox">
+                  Гостиница
+                </label>
               </li>
               <li>
-                <input type="checkbox">
-                МОТЕЛЬ
+                <label>
+                  <input type="checkbox">
+                  МОТЕЛЬ
+                </label>
               </li>
               <li>
-                <input type="checkbox">
-                АПАРТАМЕНТЫ
+                <label>
+                  <input type="checkbox">
+                  АПАРТАМЕНТЫ
+                </label>
               </li>
             </ul>
           </fildset>
@@ -75,18 +81,18 @@
         </form>
       </section>
       <section class="sorting">
-        <h2 class="visualy-hidden">Сортировка результатов</h2>
+        <h2 class="visually-hidden">Сортировка результатов</h2>
         <span>Найдено:</span>
         <span>3</span>
         <span>Сортировка</span>
         <a class="sorting-button" href="#">По цене</a>
         <a class="sorting-button" href="#">По типу</a>
         <a class="sorting-button" href="#">По рейтингу</a>
-        <a class="sorting-button sorting-button-value" href="#">По возрастанию</a>
-        <a class="sorting-button sorting-button-value" href="#">По убыванию</a>
+        <a class="sorting-button sorting-button-value" href="#"><p class="visually-hidden">Упорядочить по возрастанию</p></a>
+        <a class="sorting-button sorting-button-value" href="#"><p class="visually-hidden">Упорядочить по убыванию</p></a>
       </section>
       <section class="catalog">
-        <h2 class="visualy-hidden">Результаты поиска</h2>
+        <h2 class="visually-hidden">Результаты поиска</h2>
         <article class="catalig-item">
           <h3>Amara Resort Spa</h3>
           <img src="img/catalog-item-1.jpg" alt="Amara Resort Spa">                                               <!--Amara Resort & Spa-->
@@ -132,14 +138,14 @@
       </div>
       <div class="social">
         <ul>
-          <li><a href="https://twitter.com/sedona" class="social-buttons">Twitter</a></li>
-          <li><a href="https://facebook.com/sedona" class="social-buttons">Facebook</a></li>
-          <li><a href="https://youtube.com/channel/sedona" class="social-buttons">YouTube</a></li>
+          <li><a href="https://twitter.com/sedona" class="social-buttons twitter"><p class="visually-hidden">Twitter</p></a></li>
+          <li><a href="https://facebook.com/sedona" class="social-buttons facebook"><p class="visually-hidden">Facebook</p></a></li>
+          <li><a href="https://youtube.com/channel/sedona" class="social-buttons youtube"><p class="visually-hidden">YouTube</p></a></li>
         </ul>
       </div>
       <div>
         <p>WebSite by</p>
-        <a href="https://htmlacademy.com"></a>
+        <a href="https://htmlacademy.com" class="htmlacademy"><p class="visually-hidden">HTML Academy Web site</p></a>
       </div>
     </footer>
   </body>
