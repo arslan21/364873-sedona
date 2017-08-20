@@ -38,23 +38,26 @@ h3 {
 }
 
 .social-buttons {
+  display: inline-block;
   width: 48px;
   height: 46px;
-  background-color: #7ab2d3;
-  background-position: center;
-  background-repeat: no-repeat;
+/*  background-color: #7ab2d3;
+  text-align: center;*/
 }
 
-.twitter {
+/*.twitter {
   background-image: url("../img/twitter.svg");
 }
-
 .facebook {
   background-image: url("../img/fb-icon.svg");
 }
 
 .youtube {
   background-image: url("../img/youtube.svg");
+}*/
+
+.active {
+  color: #81b3d2;
 }
 
 a:hover,
