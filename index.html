@@ -3,6 +3,9 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Седона</title>
+    <script type="text/javascript" src="js/script.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=PT+Sans:400,700&amp;subset=cyrillic" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css/normalize.css">
     <link rel="stylesheet" type="text/css" href="css/style.css">
   </head>
   <body>
@@ -13,7 +16,7 @@
           <li><a href="#">ФОТО И ВИДЕО</a></li>
           <li><a href="index.html"><img src="img/logo.png" alt="Sedona-logo" width="138px" height="70px"><p class="visually-hidden">Sedona</p></a></li>
           <li><a href="#">КАРТА ШТАТА</a></li>
-          <li><a href="#">ГОСТИНИЦЫ</a></li>
+          <li><a href="catalog.html">ГОСТИНИЦЫ</a></li>
         </ul>
       </nav>
     </header>
@@ -41,17 +44,17 @@
           <div class="preview">
             <h2>Жилье</h2>
             <!-- <span><img src="img/hosting.png" alt="Жильё"></span> -->
-            <p class="preview-description">Рекомендуем пожить в настоящем мотеле, все как в кино!</p>
+            <p class="preview-description host">Рекомендуем пожить в настоящем мотеле, все как в кино!</p>
           </div>
           <div class="preview">
             <h2>ЕДА</h2>
             <!-- <span><img src="img/food.png" alt="Еда"></span>  -->
-            <p class="preview-description">Всегда заказывайте ФИРМЕННЫЙ БУРГЕР, Вы НЕ разочаруетесь!</p>
+            <p class="preview-description food">Всегда заказывайте ФИРМЕННЫЙ БУРГЕР, Вы НЕ разочаруетесь!</p>
           </div>
           <div class="preview">
             <h2>СУВЕНИРЫ</h2>
             <!-- <span><img src="img/souvenirs.png" alt="Сувениры"></span> -->
-            <p class="preview-description">Не только китайского, но и местного производства!</p>
+            <p class="preview-description souvenirs">Не только китайского, но и местного производства!</p>
           </div>
         </div>
         <div class="feature-items-media">
@@ -95,8 +98,8 @@
       <div class="social-tag">
         <p>#VISITSEDONA</p>
       </div>
-      <div class="social">
-        <ul>
+      <div>
+        <ul class="social">
           <li>
             <a href="https://twitter.com/sedona" class="social-buttons twitter">
               <p class="visually-hidden">Twitter</p>
@@ -140,12 +143,12 @@
       </div>
     </footer>
     <section class="arrival">
-      <form class="arriva-form" action="https://echo.htmlacademy.ru" method="post">
+      <form class="arrival-form" action="https://echo.htmlacademy.ru" method="post">
         <label>Дата заезда:<input type="date" name="calendar" class="arrival-date"></label>
         <label>Дата заезда:<input type="date" name="calendar" class="arrival-date"></label>
         <label>Взрослые:<input type="number" name="guests" value="2" class="guests"></label>
         <label>Дети:<input type="number" name="guests" value="0" class="guests"></label>
-        <a href="#" class="button arrival"></a>
+        <a href="#" class="button button-arrival">Найти</a>
       </form>
     </section>
   </body>

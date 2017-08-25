@@ -1,9 +1,11 @@
 <!DOCTYPE html>
-<html>
+<html lang="ru">
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Седона. Каталог</title>
     <script type="text/javascript" src="js/script.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=PT+Sans:400,700&amp;subset=cyrillic" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css/normalize.css">
     <link rel="stylesheet" type="text/css" href="css/style.css">
   </head>
   <body>
@@ -14,7 +16,7 @@
           <li><a href="#">ФОТО И ВИДЕО</a></li>
           <li><a href="index.html"><img src="img/logo.png" alt="Sedona-logo" width="138px" height="70px"><p class="visually-hidden">Sedona</p></a></li>
           <li><a href="#">КАРТА ШТАТА</a></li>
-          <li><a href="#">ГОСТИНИЦЫ</a></li>
+          <li><a href="#" class="active" href="catalog.html">ГОСТИНИЦЫ</a></li>
         </ul>
       </nav>
     </header>
@@ -70,7 +72,7 @@
             </ul>
           </fildset>
           <fildset>
-            <legend>Стоимость в сутки:</legend>
+            <legend>Стоимость в сутки (Р):</legend>
               <label for="min"></label>
               <input type="number" name="min" id="min" placeholder="от О">
               <label for="max"></label>
@@ -83,33 +85,33 @@
       </section>
       <section class="sorting">
         <h2 class="visually-hidden">Сортировка результатов</h2>
-        <span>Найдено:</span>
-        <span>3</span>
-        <span>Сортировка</span>
-        <a class="sorting-button active" href="#">По цене</a>
-        <a class="sorting-button" href="#">По типу</a>
-        <a class="sorting-button" href="#">По рейтингу</a>
-        <a class="sorting-button sorting-button-value" href="#">
-          <p class="visually-hidden">Упорядочить по возрастанию</p>
-          <svg width="11" height="10">
-            <polygon points="0,10 5.5,0 10,10" fill="#231F20"></polygon>
-          </svg>
-        </a>
-        <a class="sorting-button sorting-button-value" href="#">
-          <p class="visually-hidden">Упорядочить по убыванию</p>
-          <svg width="11" height="10">
-            <polygon points="0,0 5.5,10 10,0" fill="#231F20"></polygon>
-          </svg>
-        </a>
+        <div>
+          <span>Найдено:</span>
+          <span>3</span>
+        </div>
+        <div>
+          <span>Сортировка:</span>
+          <a class="sorting-button active" href="#">По цене</a>
+          <a class="sorting-button" href="#">По типу</a>
+          <a class="sorting-button" href="#">По рейтингу</a>
+        </div>
+        <div class="sorting-button-value">
+          <a class="" href="#">
+            <p class="visually-hidden">Упорядочить по возрастанию</p>
+          </a>
+          <a class="active" href="#">
+            <p class="visually-hidden">Упорядочить по убыванию</p>
+          </a>
+        </div>
       </section>
       <section class="catalog">
         <h2 class="visually-hidden">Результаты поиска</h2>
-        <article class="catalig-item">
-          <h3>Amara Resort Spa</h3>
+        <article class="catalog-item">
+          <h3><a class="hotel" href="#">Amara Resort Spa</a></h3>
           <img src="img/catalog-item-1.jpg" alt="Amara Resort Spa" width="135" height="90">                                               <!--Amara Resort & Spa-->
           <span>Гостиница</span>
           <span >ОТ 4000 Р.</span>
-          <a class="button catalog-item-button catalog-item-button-detail" href="#">Подробнее</a>
+          <a class="button catalog-item-button catalog-item-button-details" href="#">Подробнее</a>
           <a class="button catalog-item-button catalog-item-button-booking" href="#">Забронировать</a>
           <div>
             <svg xmlns="http://www.w3.org/2000/svg" width="18" height="17" viewBox="0 0 18 17">
@@ -130,12 +132,12 @@
             <span>Рейтинг: 8,5</span>
           </div>
         </article>
-        <article class="catalig-item">
-          <h3>Desert Quail Inn</h3>
+        <article class="catalog-item">
+          <h3><a class="hotel" href="#">Desert Quail Inn</a></h3>
           <img src="img/catalog-item-2.jpg" alt="Desert Quail Inn" width="135" height="90">
           <span>Мотель</span>
           <span>ОТ 3000 Р.</span>
-          <a class="button catalog-item-button catalog-item-button-detail" href="#">Подробнее</a>
+          <a class="button catalog-item-button catalog-item-button-details" href="#">Подробнее</a>
           <a class="button catalog-item-button catalog-item-button-booking" href="#">Забронировать</a>
           <div>
             <svg xmlns="http://www.w3.org/2000/svg" width="18" height="17" viewBox="0 0 18 17">
@@ -153,12 +155,12 @@
             <span>Рейтинг: 8,9</span>
           </div>
         </article>
-        <article class="catalig-item">
-          <h3>Villas at Poco Diablo</h3>
+        <article class="catalog-item">
+          <h3><a class="hotel" href="#">Villas at Poco Diablo</a></h3>
           <img src="img/catalog-item-3.jpg" alt="Villas at Poco Diablo" width="135" height="90">
           <span>Апартаменты</span>
           <span>ОТ 2000 Р.</span>
-          <a class="button catalog-item-button catalog-item-button-detail" href="#">Подробнее</a>
+          <a class="button catalog-item-button catalog-item-button-details" href="#">Подробнее</a>
           <a class="button catalog-item-button catalog-item-button-booking" href="#">Забронировать</a>
           <div>
             <svg xmlns="http://www.w3.org/2000/svg" width="18" height="17" viewBox="0 0 18 17">
@@ -179,8 +181,8 @@
       <div class="social-tag">
         <p>#VISITSEDONA</p>
       </div>
-      <div class="social">
-        <ul>
+      <div>
+        <ul class="social">
           <li>
             <a href="https://twitter.com/sedona" class="social-buttons twitter">
               <p class="visually-hidden">Twitter</p>
