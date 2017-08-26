@@ -6,8 +6,8 @@ html, body {
   font-size: 14px;
   line-height: 26px;
   text-transform: uppercase;
-  width: 100wv;
-  max-width: 768px;
+  width: 768px;
+  margin: 0px auto; /*можно ли так центровать страницу?? и окуда 14 px сверху*/
 }
 
 h1 {
@@ -41,11 +41,14 @@ h3 {
 
 ul {
   list-style: none;
+  height: 56px;
+  margin-bottom: 0px;
 }
 
 .site-navigation {
   display: flex;
   justify-content: space-around;
+
 }
 
 .site-navigation a {
@@ -55,12 +58,28 @@ ul {
 }
 
 .welcome {
+  height: 512px;
   background-color: #8d3e58;
-  background-image: url("../img/background-photo.jpg");
-  /*background-image: url("../img/white.png");*/
-  background-position: center;
+  background-image:
+    url("../img/white.png"),
+    url("../img/background-photo.jpg");
+  background-position:
+    left 0px bottom -1px,
+    center;
   background-repeat: no-repeat;
   text-align: center;
+  margin: 0px auto;
+}
+
+.welcome img {
+  margin: 76px auto;
+}
+
+
+article.slogan p {
+  display: inline-block;
+  width: 440px;
+  margin: 0px auto;
 }
 
 .slogan p {
@@ -87,9 +106,15 @@ ul {
   color: #ffffff;
 }
 
+.feature-items {
+  display: flex;
+  justify-content: space-around;
+}
+
 .preview p::before {
   content: "";
   display: block;
+  margin: 0px auto;
 }
 
 .preview p.food::before {
@@ -112,6 +137,7 @@ ul {
 
 .resume {
   width: 568px;
+  margin: 0px auto;
   text-align: center;
 }
 
@@ -120,6 +146,11 @@ ul {
   font-size: 30px;
   font-weight: bold;
   line-height: 36px
+}
+
+.resume p:nth-child(2) {
+  display: inline-block;
+  width: 434px;
 }
 
 .button-search {
@@ -136,7 +167,7 @@ ul {
   background-color: #c0e7a9;
   background-image: url("../img/map.jpg");
   background-repeat: no-repeat;
-
+  margin: 0px auto;
 }
 
 .social-tag {
@@ -205,6 +236,7 @@ ul {
   height: 395px;
   box-shadow: 0 7px 15px rgba(0, 1, 1, 0.15);
   text-align: center;
+  margin: 0px auto;
 }
 
 .arrival-form {
@@ -238,8 +270,10 @@ ul {
 }
 
 .filter {
+  height: 418px;
   display: flex;
   justify-content: space-around;
+  margin: 0px auto;
   background-color: #8d3e58;
   background-image: url("../img/background-catalog.jpg");
   background-position: center;
@@ -339,18 +373,42 @@ a.sorting-button.active {
   display: inline-block;
   width: 11px;
   height: 10px;
+  margin: 0px 3px;
   background-color: #ffffff;
   background-repeat: no-repeat;
 }
 
-.sorting-button-value a:first-child {
-  background-image: url("../img/icon-up.svg");
+.arrow::before {
+  content: "";
+  display: inline-block;
+  border: 10px solid #cacaca;
+  border-left-width: 5px;
+  border-right-width: 5px;
+  border-right-color: transparent;
+  border-left-color: transparent;
 }
 
-.sorting-button-value a:last-child {
-  background-image: url("../img/icon-down.svg");
+.arrow-up::before {
+  border-top-width: 0px;
 }
 
+.arrow-down::before {
+  border-bottom-width: 0px;
+}
+
+a.arrow::before:hover,
+a.arrow::before:focus {
+  border-top-color: #241e20;
+  border-bottom-color: #241e20;
+}
+
+a.arrow::before:active,
+sorting-button-value a.active::before {
+  border-top-color: #7ab2d3;
+  border-bottom-color: #7ab2d3;
+}
+
+/*
 .sorting-button-value a:first-child:hover,
 .sorting-button-value a:first-child:focus {
   background-image: url("../img/icon-up-hover.svg");
@@ -369,7 +427,7 @@ a.sorting-button.active {
 .sorting-button-value a:last-child:active,
 .sorting-button-value a:last-child.active {
   background-image: url("../img/icon-down-active.svg");
-}
+}*/
 
 .site-navigation a,
 a.hotel {
