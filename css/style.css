@@ -7,7 +7,12 @@ html, body {
   line-height: 26px;
   text-transform: uppercase;
   width: 768px;
+  box-sizing: border-box;
   margin: 0px auto; /*можно ли так центровать страницу?? и окуда 14 px сверху*/
+}
+
+*, *::before, *::after {
+  box-sizing: inherit;
 }
 
 h1 {
@@ -41,14 +46,27 @@ h3 {
 
 ul {
   list-style: none;
-  height: 56px;
-  margin-bottom: 0px;
+  margin: 0;
+  padding: 0;
 }
 
 .site-navigation {
   display: flex;
   justify-content: space-around;
+  align-items: center;
+  padding-top: 22px;
+  padding-bottom: 22px;
+}
 
+/*.site-navigation li {
+  margin-top: 0px;
+  margin-bottom: 0px
+}*/
+
+.logo {
+  position: absolute;
+  left: 50%;
+  margin-left: -69px
 }
 
 .site-navigation a {
@@ -91,6 +109,12 @@ article.slogan p {
 
 .features{
   text-align: center;
+  padding-top: 57px;
+}
+
+.five-features {
+  padding-top: 39px;
+  padding-bottom: 55px;
 }
 
 .feature-items-media {
@@ -102,13 +126,24 @@ article.slogan p {
 }
 
 .feature-items-media .preview {
+  height: 256px;
   background-color: #81b3d2;
   color: #ffffff;
+  display: flex;
+  align-content: center;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 38px;
 }
 
 .feature-items {
   display: flex;
-  justify-content: space-around;
+  align-items: center;
+}
+
+.feature-items .preview {
+  height: 256px;
+  padding: 50px;
 }
 
 .preview p::before {
@@ -135,6 +170,10 @@ article.slogan p {
   height: 76px;
 }
 
+.feature-items-media:nth-of-type(3) .preview{
+  order: 1;
+}
+
 .resume {
   width: 568px;
   margin: 0px auto;
@@ -151,10 +190,12 @@ article.slogan p {
 .resume p:nth-child(2) {
   display: inline-block;
   width: 434px;
+  padding-bottom: 30px;
 }
 
 .button-search {
   width: 568px;
+  padding-top: 35px;
   height: 86px;
   background-color: #766357;
   font-size: 21px;
@@ -168,6 +209,7 @@ article.slogan p {
   background-image: url("../img/map.jpg");
   background-repeat: no-repeat;
   margin: 0px auto;
+  margin-bottom: -120px;
 }
 
 .social-tag {
@@ -190,26 +232,6 @@ article.slogan p {
   height: 48px;
 }
 
-.social-buttons {
-  /*display: block;*/
-  width: 48px;
-  height: 46px;
-/*  background-color: #7ab2d3;
-  text-align: center;*/
-}
-
-
-/*.twitter {
-  background-image: url("../img/twitter.svg");
-}
-.facebook {
-  background-image: url("../img/fb-icon.svg");
-}
-
-.youtube {
-  background-image: url("../img/youtube.svg");
-}*/
-
 .button {
   text-decoration: none;
   color: #ffffff;
@@ -220,36 +242,74 @@ article.slogan p {
 
 .footer {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
+  align-items: center;
+  background-color: #ffffff;
+  opacity: 0.9;
+  height: 120px;
 }
 
-.button-arrival {
-  width: 458px;
-  height: 58px;
-  font-size: 21px;
-  background-color: #4a94be;
-  font-weight: bold;
+.social-tag {
+
+}
+
+.social {
+
+}
+
+.website-by {
+
+}
+
+.htmlacademy {
+
+}
+
+.social-button {
+  width: 48px;
+  height: 46px;
+  background-color: #7ab2d3;
+  /*opacity: 1;*/
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.social-button svg:active {
+  opacity: 0.3;
 }
 
 .arrival {
   width: 568px;
   height: 395px;
+  background-color: #ffffff;
   box-shadow: 0 7px 15px rgba(0, 1, 1, 0.15);
-  text-align: center;
-  margin: 0px auto;
+  margin: auto;
+  display: flex;
+  align-content: center;
+  justify-content: center;
 }
 
 .arrival-form {
-
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  align-content: stretch;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  width: 458px;
+  height: 285px;
+  /*margin: 0 auto;*/
 }
 
-
-.arrival label {
+.arrival-form label {
   color: #000000;
   font-weight: bold;
 }
 
-.arrival-form input {
+.arrival-date,
+.guests-input {
   background-color: #f2f2f2;
   border: none;
   height: 38px;
@@ -257,22 +317,59 @@ article.slogan p {
   font-weight: bold;
 }
 
+.arrival-date{
+  width: 308px;
+}
+
+.guests-input {
+  width: 38px;
+}
+
 .arrival-form input:focus {
   background-color: #ffffff;
 }
 
-.arrival-form input[type="date"] {
-  width: 346px;
+label.guests:first-of-type {
+  align-self: flex-start;
+}
+label.guests:last-of-type {
+  align-self: flex-end;
 }
 
-.arrival-form input[type="number"] {
+.guests-minus,
+.guests-plus,
+.calendar {
   width: 38px;
+  height: 38px;
+  background-color: #f2f2f2;
+  background-repeat: no-repeat;
+  border: none;
+  background-position: center;
+}
+
+.calendar {
+  background-image: url("../img/calendar.svg");
+}
+
+.guests-plus {
+  background-image: url("../img/plus.png");
+}
+
+.guests-minus {
+  background-image: url("../img/minus.png");
+}
+
+.button-arrival {
+  width: 458px;
+  height: 58px;
+  font-size: 21px;
+  padding-top: 17px;
+  background-color: #4a94be;
+  font-weight: bold;
 }
 
 .filter {
   height: 418px;
-  display: flex;
-  justify-content: space-around;
   margin: 0px auto;
   background-color: #8d3e58;
   background-image: url("../img/background-catalog.jpg");
@@ -281,10 +378,26 @@ article.slogan p {
   color: #ffffff
 }
 
-.filter legend {
+.filter-hotel {
+  display: flex;
+  justify-content: space-around;
+  margin-left: 45px;
+  margin-right: 45px;
+}
+
+.filter h3 {
   font-size: 16px;
   font-weight: bold;
 }
+
+.infrastructure
+
+.host-type
+
+.price
+
+
+
 
 .filter input[type="number"] {
   color: #ffffff;
