@@ -8,7 +8,13 @@ html, body {
   text-transform: uppercase;
   width: 768px;
   box-sizing: border-box;
-  margin: 0px auto; /*можно ли так центровать страницу?? и окуда 14 px сверху*/
+  margin: 0px auto; /*можно ли так центровать страницу?? */
+}
+
+body {
+  /*background-image: url("../img/index.jpg");*/
+  /*background-image: url("../img/catalog.jpg");*/
+  /*background-repeat: no-repeat;*/
 }
 
 *, *::before, *::after {
@@ -21,7 +27,8 @@ h1 {
   color: #000000;
 }
 
-h2 {
+h2,
+.preview-other span {
   line-height: 21px;
   font-size: 21px;
   font-weight: bold;
@@ -51,22 +58,34 @@ ul {
 }
 
 .site-navigation {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  padding-top: 22px;
-  padding-bottom: 22px;
+  text-align: left;
 }
 
-/*.site-navigation li {
-  margin-top: 0px;
-  margin-bottom: 0px
-}*/
+.nav-item {
+  display: inline-block;
+  text-align: left;
+  width: 150px;
+  margin-top: 14px;
+  margin-bottom: 16px;
+  padding-left: 46px;
+}
+
+.site-navigation li:nth-child(2) {
+  margin-right: 155px;
+}
+
+.site-navigation li:nth-child(3),
+.site-navigation li:nth-child(4) {
+  text-align: right;
+  padding-left: 0;
+  padding-right: 46px;
+}
+
 
 .logo {
   position: absolute;
   left: 50%;
-  margin-left: -69px
+  margin-left: -69px;
 }
 
 .site-navigation a {
@@ -80,10 +99,12 @@ ul {
   background-color: #8d3e58;
   background-image:
     url("../img/white.png"),
-    url("../img/background-photo.jpg");
+    url("../img/background-photo-big.jpg");
   background-position:
     left 0px bottom -1px,
     center;
+
+  background-size: 100%;
   background-repeat: no-repeat;
   text-align: center;
   margin: 0px auto;
@@ -93,18 +114,13 @@ ul {
   margin: 76px auto;
 }
 
-
-article.slogan p {
+.slogan p {
   display: inline-block;
   width: 440px;
   margin: 0px auto;
-}
-
-.slogan p {
-  width: 440px;
   font-size: 21px;
   font-weight: bold;
-  text-align: center;                     /*как выравнять?*/
+  padding-top: -100px;
 }
 
 .features{
@@ -113,8 +129,8 @@ article.slogan p {
 }
 
 .five-features {
-  padding-top: 39px;
-  padding-bottom: 55px;
+  padding-top: 15px;
+  padding-bottom: 35px;
 }
 
 .feature-items-media {
@@ -146,28 +162,46 @@ article.slogan p {
   padding: 50px;
 }
 
-.preview p::before {
+.preview-other span::before {
   content: "";
   display: block;
   margin: 0px auto;
+  background-repeat: no-repeat;
+  margin-bottom: 28px;
 }
 
-.preview p.food::before {
+.preview span.food::before {
   background-image: url("../img/food.png");
   width: 74px;
-  height: 68px;
+  height: 72px;
 }
 
-.preview p.host::before {
+.preview span.host::before {
   background-image: url("../img/host.png");
   width: 75px;
   height: 72px;
 }
 
-.preview p.souvenirs::before {
+.preview span.souvenirs::before {
   background-image: url("../img/souvenirs.png");
   width: 64px;
   height: 76px;
+}
+
+.preview-other {
+  margin-bottom: 66px;
+}
+
+.feature-items .preview.preview-main {
+  background-color: #eeeeee;
+  padding-top: 20px;
+  line-height: 21px;
+  margin-top: -10px;
+}
+
+.feature-items .preview.preview-main span {
+  display: block;
+  margin: 24px auto 20px;
 }
 
 .feature-items-media:nth-of-type(3) .preview{
@@ -180,14 +214,16 @@ article.slogan p {
   text-align: center;
 }
 
-.resume p:first-child {
+.resume span {
+  display: inline-block;
+  margin: 52px auto 10px;
   color: #000000;
   font-size: 30px;
   font-weight: bold;
   line-height: 36px
 }
 
-.resume p:nth-child(2) {
+.resume p {
   display: inline-block;
   width: 434px;
   padding-bottom: 30px;
@@ -212,26 +248,6 @@ article.slogan p {
   margin-bottom: -120px;
 }
 
-.social-tag {
-  font-weight: bold;
-}
-
-.htmlacademy {
-  display: block;
-  width: 115px;
-  height: 41px;
-  background-image: url("../img/htmlacademy.png");
-  background-position: center;
-  background-repeat: no-repeat;
-}
-
-.social {
-  display: flex;
-  justify-content: space-between;
-  width: 153px;
-  height: 48px;
-}
-
 .button {
   text-decoration: none;
   color: #ffffff;
@@ -242,27 +258,45 @@ article.slogan p {
 
 .footer {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
   background-color: #ffffff;
   opacity: 0.9;
-  height: 120px;
+  /*height: 120px;*/
+  padding-left: 60px;
+  padding-right: 30px;
+  padding-top: 36px;
+  padding-bottom: 36px;
 }
 
 .social-tag {
-
+  font-size: 21px;
+  line-height: 26px;
+  font-weight: bold;
 }
 
 .social {
-
+  display: flex;
+  justify-content: space-between;
+  width: 153px;
+  height: 48px;
+  margin-left: 30px;
 }
 
 .website-by {
-
+  display: flex;
+  align-items: center;
+  width: 195px;
 }
 
 .htmlacademy {
-
+  display: inline-block;
+  width: 115px;
+  height: 41px;
+  background-image: url("../img/htmlacademy.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  margin-left: 5px;
 }
 
 .social-button {
@@ -369,10 +403,11 @@ label.guests:last-of-type {
 }
 
 .filter {
-  height: 418px;
+  height: 217px;
   margin: 0px auto;
   background-color: #8d3e58;
-  background-image: url("../img/background-catalog.jpg");
+  background-image: url("../img/background-catalog-big.jpg");
+  background-size: 100%;
   background-position: center;
   background-repeat: no-repeat;
   color: #ffffff
@@ -380,9 +415,14 @@ label.guests:last-of-type {
 
 .filter-hotel {
   display: flex;
-  justify-content: space-around;
-  margin-left: 45px;
-  margin-right: 45px;
+  justify-content: space-between;
+  height: 155px;
+  padding-top: 8px;
+}
+
+.filter-hotel div {
+  margin-left: 46px;
+  margin-right: 52px;
 }
 
 .filter h3 {
@@ -390,24 +430,26 @@ label.guests:last-of-type {
   font-weight: bold;
 }
 
-.infrastructure
+.infrastructure,
+.host-type {
+  width: 140px;
+}
 
-.host-type
+.price {
+  width: 222px;
+  text-align: center;
+}
 
-.price
-
-
-
-
-.filter input[type="number"] {
+.filter input[type="text"] {
   color: #ffffff;
   background-color: inherit;
   border: 2px solid #ffffff;
   width: 105px;
   height: 32px;
+  margin: auto;
 }
 
-.filter input[type="number"]:first-of-type {
+.filter input[type="text"]:first-of-type {
   margin-right: -6px;
 }
 
@@ -426,28 +468,98 @@ input.slider::after {
   height: 32px;
   background-color: inherit;
   text-transform: uppercase;
+  margin: auto;
 }
 
 .sorting {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
+  align-items: center;
   border-bottom: 1px solid #e5e5e5;
+  padding-top: 32px;
+  padding-bottom: 30px;
+  padding-left: 46px;
+  padding-right: 42px;
 }
 
-.sorting div:first-of-type {
+.sorting div:nth-child(2) {
   color: #000000;
   font-size: 21px;
   font-weight: bold;
 }
 
+.sorting-parameters {
+  /*margin-left: -168px;*/
+}
+
+.sorting-button-value {
+}
+
+.sorting-button {
+  /*display: inline-block;*/
+  /*width: 75px;*/
+  font-size: 12px;
+  line-height: 18px;
+  opacity: 0.7;
+  /*margin-right: -10px;*/
+}
+
+.sorting-parameters span {
+  font-size: 12px;
+  line-height: 18px;
+}
+
 .catalog-item {
   border-bottom: 1px solid #e5e5e5;
+  padding: 30px 46px 29px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
 
+.catalog-item-main {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  align-items: flex-start;
+  height: 90px;
+  margin-left: -112px;
+}
+
+.catalog-item-main h3{
+  display: inline-block;
+  margin: 0;
+  line-height: 13px;
+}
+
+.catalog-item-main span {
+  display: inline-block;
+  width: 116px;
+}
+
+.rating {
+  display: flex;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+  align-content: space-between;
+  width: 111px;
+  height: 91px;
 }
 
 .catalog-item-button {
+  display: inline-block;
   font-weight: bold;
   height: 27px;
+  margin-right: 0;
+}
+
+.rating span {
+  display: block;
+  width: 110px;
+  height: 27px;
+  background-color: #f2f2f2;
+  text-align: center;
+  color: #666666;
 }
 
 .catalog-item-button-details {
@@ -509,14 +621,14 @@ a.sorting-button.active {
   border-bottom-width: 0px;
 }
 
-a.arrow::before:hover,
-a.arrow::before:focus {
+a.arrow:hover::before,
+a.arrow:focus::before {
   border-top-color: #241e20;
   border-bottom-color: #241e20;
 }
 
-a.arrow::before:active,
-sorting-button-value a.active::before {
+a.arrow:active::before,
+.sorting-button-value a.active::before {
   border-top-color: #7ab2d3;
   border-bottom-color: #7ab2d3;
 }
