@@ -8,7 +8,7 @@ html, body {
   text-transform: uppercase;
   width: 768px;
   box-sizing: border-box;
-  /*margin: 0px auto; /*можно ли так центровать страницу?? */*/
+  margin: 0px auto; /*можно ли так центровать страницу?? */
 }
 
 body {
@@ -63,6 +63,7 @@ ul {
 
 .nav-item {
   display: inline-block;
+  vertical-align: baseline;
   text-align: left;
   width: 150px;
   margin-top: 14px;
@@ -81,9 +82,13 @@ ul {
   padding-right: 46px;
 }
 
+.main-navigation {
+  position: relative;
+}
 
 .logo {
   position: absolute;
+  z-index: 2;
   left: 50%;
   margin-left: -69px;
 }
@@ -115,7 +120,7 @@ ul {
 }
 
 .slogan p {
-  display: inline-block;
+  /*display: inline-block;  */
   width: 440px;
   margin: 0px auto;
   font-size: 21px;
@@ -215,7 +220,7 @@ ul {
 }
 
 .resume span {
-  display: inline-block;
+  display: block;
   margin: 52px auto 10px;
   color: #000000;
   font-size: 30px;
@@ -224,9 +229,10 @@ ul {
 }
 
 .resume p {
-  display: inline-block;
+  display: block;
   width: 434px;
   padding-bottom: 30px;
+  margin: 0 auto;
 }
 
 .button-search {
@@ -290,7 +296,6 @@ ul {
 }
 
 .htmlacademy {
-  display: inline-block;
   width: 115px;
   height: 41px;
   background-image: url("../img/htmlacademy.png");
@@ -340,6 +345,11 @@ ul {
 .arrival-form label {
   color: #000000;
   font-weight: bold;
+}
+
+.guests {
+  display: flex;
+  justify-content: space-between;
 }
 
 .arrival-date,
@@ -532,13 +542,13 @@ input.slider::after {
 }
 
 .catalog-item-main h3{
-  display: inline-block;
   margin: 0;
   line-height: 13px;
 }
 
 .catalog-item-main span {
   display: inline-block;
+  vertical-align: baseline;
   width: 116px;
 }
 
@@ -553,6 +563,7 @@ input.slider::after {
 
 .catalog-item-button {
   display: inline-block;
+  vertical-align: baseline;
   font-weight: bold;
   height: 27px;
   margin-right: 0;
@@ -601,6 +612,7 @@ a.sorting-button.active {
 
 .sorting-button-value a {
   display: inline-block;
+  vertical-align: baseline;
   width: 11px;
   height: 10px;
   margin: 0px 3px;
@@ -611,6 +623,7 @@ a.sorting-button.active {
 .arrow::before {
   content: "";
   display: inline-block;
+  vertical-align: baseline;
   border: 10px solid #cacaca;
   border-left-width: 5px;
   border-right-width: 5px;
