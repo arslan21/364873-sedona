@@ -482,7 +482,7 @@ ul {
 }
 
 .filter {
-  height: 217px;
+  min-height: 217px;
   margin: 0px auto;
   background-color: #8d3e58;
   background-image: url("../img/background-catalog.jpg");
@@ -492,28 +492,68 @@ ul {
   color: #ffffff
 }
 
-.filter div>span {
+.filter-type {
   color: #ffffff;
   font-size: 16px;
   font-weight: bold;
   line-height: 21px;
-
+  display: inline-block;
 }
 
 .filter-hotel {
   display: flex;
   justify-content: space-between;
+  align-items: flex-start;
+  align-content: flex-start;
+  flex-wrap: wrap;;
   padding: 26px 6%;
-  height: 217px;
+  min-height: 217px;
 }
 
 .infrastructure,
 .host-type {
-  width: 220px;
+  width: 160px;
+  margin-right: 94px;
+  position: relative;
 }
 
 .host-type {
-  margin-left: -250px;
+  flex-grow: 1;
+}
+
+.infrastructure .filter-type,
+.host-type .filter-type {
+  margin-bottom: 24px;
+}
+
+.infrastructure label,
+.host-type label {
+  display: inline-block;
+  margin-left: 40px;
+  margin-bottom: 20px;
+}
+
+.infrastructure .filter-type-list li:last-of-type label,
+.host-type .filter-type-list li:last-of-type label {
+  margin-bottom: 0;
+}
+
+.infrastructure label::before,
+.host-type label::before {
+  content: "";
+  display: inline-block;
+  vertical-align: middle;
+  width: 27px;
+  height: 23px;
+  background-image: url("../img/checkbox-off.svg");
+  background-repeat: no-repeat;
+  position: absolute;
+  left: 0px;
+}
+
+.infrastructure input:checked ~ label::before,
+.host-type input:checked ~ label::before {
+  background-image: url("../img/checkbox-on.svg");
 }
 
 .price {
@@ -537,6 +577,17 @@ ul {
   height: 36px;
   margin-top: 7px;
   margin-bottom: 20px;
+}
+
+.price-show::after {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 2px;
+  height: 22px;
+  background-color: #ffffff;
+  bottom: 5px;
+  right: 155px;
 }
 
 .price label {
@@ -567,12 +618,12 @@ ul {
 }
 
 .slider-main {
-  width: 270px;
+  width: 85%;
   z-index: 1;
 }
 
 .slider-outside {
-  width: 317px;
+  width: 100%;
   opacity: 0.3;
 }
 
@@ -601,13 +652,17 @@ ul {
   text-transform: uppercase;
   margin-top: 53px;
   margin-left: 86px;
-  padding-top: 6px;
-  padding-bottom: 6px;
-  padding-left: 33px;
-  padding-right: 33px;
+  padding: 6px 33px;
   font: inherit;
   font-size: 14px;
   line-height: 21px;
+  cursor: pointer;
+}
+
+.filter-button:hover {
+
+  color: #000000;
+  background-color: #ffffff;
 }
 
 .sorting {
@@ -615,14 +670,15 @@ ul {
   justify-content: space-between;
   align-items: center;
   border-bottom: 1px solid #e5e5e5;
-  padding-top: 30px;
-  padding-bottom: 30px;
+  padding-top: 32px;
+  padding-bottom: 29px;
   padding-left: 6%;
   padding-right: 6%;
 }
 
 .sorting div {
   display: inline-block;
+  vertical-align: bottom;
 }
 
 .result {

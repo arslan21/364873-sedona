@@ -6,7 +6,7 @@
     <script type="text/javascript" src="js/script.js"></script>
     <link href="https://fonts.googleapis.com/css?family=PT+Sans:400,700&amp;subset=cyrillic" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="css/normalize.css">
-    <link rel="stylesheet" type="text/css" href="css/style0.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
   </head>
   <body>
     <header class="main-header">
@@ -26,53 +26,41 @@
         <h2 class="visually-hidden">Подбор отеля</h2>
         <form class="filter-hotel" action="https://echo.htmlacademy.ru" method="get">
           <div class="infrastructure">
-            <span>Инфраструктура:</span>
-            <ul>
+            <span class="filter-type">Инфраструктура:</span>
+            <ul class="filter-type-list">
               <li>
-                <label>
-                  <input type="checkbox">
-                  БАССЕЙН
-                </label>
+                <input id="pool" type="checkbox" class="visually-hidden" checked>
+                <label for="pool">Басейн</label>
               </li>
               <li>
-                <label>
-                  <input type="checkbox">
-                  ПАРКОВКА
-                </label>
+                <input id="parking" type="checkbox" class="visually-hidden">
+                <label for="parking">Парковка</label>
               </li>
               <li>
-                <label>
-                  <input type="checkbox">
-                  Wi-Fi
-                </label>
+                <input id="wi-fi" type="checkbox" class="visually-hidden">
+                <label for="wi-fi">Wi-Fi</label>
               </li>
             </ul>
           </div>
           <div class="host-type">
-            <span>Тип жилья:</span>
-            <ul>
+            <span class="filter-type">Тип жилья:</span>
+            <ul class="filter-type-list">
               <li>
-                <label>
-                  <input type="checkbox">
-                  Гостиница
-                </label>
+                <input id="hotel" type="checkbox" class="visually-hidden" checked>
+                <label for="hotel">Гостиница</label>
               </li>
               <li>
-                <label>
-                  <input type="checkbox">
-                  МОТЕЛЬ
-                </label>
+                <input id="motel" type="checkbox" class="visually-hidden" checked>
+                <label for="motel">Мотель</label>
               </li>
               <li>
-                <label>
-                  <input type="checkbox">
-                  АПАРТАМЕНТЫ
-                </label>
+                <input id="aprtment" type="checkbox" class="visually-hidden" checked>
+                <label for="aprtment">Апартаменты</label>
               </li>
             </ul>
           </div>
           <div class="price">
-            <span>Стоимость в сутки (Р):</span>
+            <span class="filter-type">Стоимость в сутки (Р):</span>
             <div class="price-show">
               <label for="min-price">
                 От
