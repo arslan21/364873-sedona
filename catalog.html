@@ -6,7 +6,7 @@
     <script type="text/javascript" src="js/script.js"></script>
     <link href="https://fonts.googleapis.com/css?family=PT+Sans:400,700&amp;subset=cyrillic" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="css/normalize.css">
-    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="css/style0.css">
   </head>
   <body>
     <header class="main-header">
@@ -26,7 +26,7 @@
         <h2 class="visually-hidden">Подбор отеля</h2>
         <form class="filter-hotel" action="https://echo.htmlacademy.ru" method="get">
           <div class="infrastructure">
-            <h3>Инфраструктура:</h3>
+            <span>Инфраструктура:</span>
             <ul>
               <li>
                 <label>
@@ -49,7 +49,7 @@
             </ul>
           </div>
           <div class="host-type">
-            <h3>Тип жилья:</h3>
+            <span>Тип жилья:</span>
             <ul>
               <li>
                 <label>
@@ -72,19 +72,27 @@
             </ul>
           </div>
           <div class="price">
-            <h3>Стоимость в сутки (Р):</h3>
-              <label class="min" for="min"></label>
-              <input type="text" name="min" id="min" value="от О        до 3000">
-              <label class="range" for="range"></label>
+            <span>Стоимость в сутки (Р):</span>
+            <div class="price-show">
+              <label for="min-price">
+                От
+                <input type="text" id="min-price" name="price-show" value="0">
+              </label>
+              <label for="max-price">
+                До
+                <input type="text" id="max-price" name="price-show" value="3000">
+              </label>
+            </div>
+            <div class="price-range">
               <span class="slider slider-main"></span>
               <span class="slider slider-outside"></span>
-              <button class="button filter-button" type="submit" name="button">Показать</button>
             </div>
+            <button class="button filter-button" type="submit" name="button">Показать</button>
         </form>
       </section>
       <section class="sorting">
         <h2 class="visually-hidden">Сортировка результатов</h2>
-        <div>
+        <div class="result">
           <span>Найдено:</span>
           <span>3</span>
         </div>
@@ -106,9 +114,9 @@
       <section class="catalog">
         <h2 class="visually-hidden">Результаты поиска</h2>
         <article class="catalog-item">
-          <img src="img/catalog-item-1.jpg" alt="Amara Resort Spa" width="135" height="90">                                               <!--Amara Resort & Spa-->
+          <img src="img/catalog-item-1.jpg" alt="Amara Resort &#038; Spa" width="135" height="90">                                               <!--Amara Resort & Spa-->
           <div class="catalog-item-main">
-            <h3><a class="hotel" href="#">Amara Resort Spa</a></h3>
+            <h3><a class="hotel" href="#">Amara Resort &#038; Spa</a></h3>
             <div>
               <span>Гостиница</span>
               <span >ОТ 4000 Р.</span>
@@ -119,9 +127,6 @@
             </div>
          </div>
           <div class="rating">
-            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="17" viewBox="0 0 18 17">
-              <path fill="#81B3D2" d="M9.002 0l2.126 6.494h6.877l-5.564 4.012L14.566 17l-5.564-4.013L3.438 17l2.126-6.494L0 6.494h6.878z"/>
-            </svg>
             <svg xmlns="http://www.w3.org/2000/svg" width="18" height="17" viewBox="0 0 18 17">
               <path fill="#81B3D2" d="M9.002 0l2.126 6.494h6.877l-5.564 4.012L14.566 17l-5.564-4.013L3.438 17l2.126-6.494L0 6.494h6.878z"/>
             </svg>
@@ -160,9 +165,6 @@
             <svg xmlns="http://www.w3.org/2000/svg" width="18" height="17" viewBox="0 0 18 17">
               <path fill="#81B3D2" d="M9.002 0l2.126 6.494h6.877l-5.564 4.012L14.566 17l-5.564-4.013L3.438 17l2.126-6.494L0 6.494h6.878z"/>
             </svg>
-            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="17" viewBox="0 0 18 17">
-              <path fill="#81B3D2" d="M9.002 0l2.126 6.494h6.877l-5.564 4.012L14.566 17l-5.564-4.013L3.438 17l2.126-6.494L0 6.494h6.878z"/>
-            </svg>
             <span>Рейтинг: 8,9</span>
           </div>
         </article>
@@ -180,9 +182,6 @@
             </div>
           </div>
           <div class="rating">
-            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="17" viewBox="0 0 18 17">
-              <path fill="#81B3D2" d="M9.002 0l2.126 6.494h6.877l-5.564 4.012L14.566 17l-5.564-4.013L3.438 17l2.126-6.494L0 6.494h6.878z"/>
-            </svg>
             <svg xmlns="http://www.w3.org/2000/svg" width="18" height="17" viewBox="0 0 18 17">
               <path fill="#81B3D2" d="M9.002 0l2.126 6.494h6.877l-5.564 4.012L14.566 17l-5.564-4.013L3.438 17l2.126-6.494L0 6.494h6.878z"/>
             </svg>
