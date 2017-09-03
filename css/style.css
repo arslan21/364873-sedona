@@ -360,62 +360,73 @@ ul {
 
 .arrival-form {
   margin: 55px;
+  margin-top: 56px;
   display: flex;
   flex-direction: column;
-  align-content: stretch;
   justify-content: space-between;
+  align-content: stretch;
   flex-wrap: wrap;
 }
 
-.arifal-form-input {
+.arrival-form-input {
   display: flex;
-  flex-direction: column;
   justify-content: space-between;
-  align-content: stretch;
+  align-content: space-between;
   flex-wrap: wrap;
-  height: 173px;
   box-sizing: border-box;
+  height: 173px;
 }
 
-.arrival-form label {
-  position: relative;
+.date,
+.guests {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
   color: #000000;
   font-weight: bold;
+  font-family: inherit;
 }
 
-.guests {
-  /*display: flex;*/
-  /*justify-content: space-between;*/
+.guests span {
+  /*width: 111px;*/
 }
 
-.arrival-date,
+.guests-children {
+  /*padding-left: 20px;*/
+  /*flex-grow: 1;*/
+}
+
+.date-input,
 .guests-input {
   background-color: #f2f2f2;
   border: none;
   height: 38px;
   color: #000000;
+  font-family: "PT Sans", sans-serif;
   font-weight: bold;
+  text-transform: uppercase;
 }
 
-.arrival-date{
+.date-input{
   width: 346px;
+  margin-right: -24px;
+  padding-left: 12px;
 }
 
 .guests-input {
   margin-left: 38px;
   margin-right: 38px;
   width: 38px;
+  padding-left: 15px;
 }
 
-.arrival-form input:focus {
+.date-input:focus,
+.guests-input:focus {
   background-color: #ffffff;
 }
 
-label.guests:first-of-type {
-  align-self: flex-start;
-}
-label.guests:last-of-type {
-  align-self: flex-end;
+.arrival-form-input div {
+  position: relative;
 }
 
 .guests-minus,
@@ -429,8 +440,18 @@ label.guests:last-of-type {
 }
 
 .calendar {
-  right: 19px;
+  right: 0px;
   background-color: transparent;
+}
+
+.guests-plus {
+  background-image: url("");
+  right: 0px;
+  top: 0px;
+}
+
+.guests-minus {
+  background-image: url("");
 }
 
 .guests-minus path,
@@ -449,15 +470,6 @@ label.guests:last-of-type {
 .guests-plus:active path,
 .calendar:active path {
   fill: #7ab2d3;
-}
-
-.guests-plus {
-  background-image: url("../img/plus.png");
-  left: 150px;
-}
-
-.guests-minus {
-  background-image: url("../img/minus.png");
 }
 
 .button-arrival {
