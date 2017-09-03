@@ -437,6 +437,9 @@ ul {
   height: 38px;
   background-color: #f2f2f2;
   border: none;
+  font-size: 21px;
+  font-weight: bold;
+  line-height: 26px;
 }
 
 .calendar {
@@ -445,29 +448,37 @@ ul {
 }
 
 .guests-plus {
-  background-image: url("");
+  /*background-image: url("");*/
   right: 0px;
   top: 0px;
 }
 
 .guests-minus {
-  background-image: url("");
+  /*background-image: url("");*/
 }
 
-.guests-minus path,
-.guests-plus path,
+.guests-minus,
+.guests-plus {
+  color: #a9a9a9;
+}
+
 .calendar path {
   fill: #a9a9a9;
 }
 
-.guests-minus:hover path,
-.guests-plus:hover path,
+.guests-minus:hover,
+.guests-plus:hover {
+  color: #000000;
+}
+
 .calendar:hover path {
   fill: #000000;
 }
 
-.guests-minus:active path,
-.guests-plus:active path,
+.guests-minus:active,
+.guests-plus:active {
+  color: #7ab2d3;
+}
 .calendar:active path {
   fill: #7ab2d3;
 }
