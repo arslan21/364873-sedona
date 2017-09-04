@@ -78,24 +78,28 @@ a {
   padding-right: 6%;
   display: flex;
   justify-content: space-between;
+  align-content: center;
+  flex-wrap: wrap;
 }
 
 .nav-item {
   display: inline-block;
   vertical-align: middle;
   text-align: left;
-  width: 19%;
+  width: 23%;
   padding-top: 14px;
   padding-bottom: 16px;
 }
 
-.nav-item:nth-child(2) {
-  margin-right: 12%;
+.nav-item:nth-child(4n-2) {
+  flex-grow: 1;
+  flex-shrink: 0;
 }
 
-.nav-item:nth-child(3),
-.nav-item:nth-child(4) {
+.nav-item:nth-child(4n-1),
+.nav-item:nth-child(4n) {
   text-align: right;
+  color: red;
 }
 
 .main-navigation {
@@ -105,8 +109,9 @@ a {
 .logo {
   position: absolute;
   z-index: 2;
+  top: 0;
   left: 50%;
-  margin-left: -69px;
+  transform: translate(-50%);
 }
 
 .nav-item a {
@@ -516,10 +521,15 @@ a {
 .button-arrival {
   width: 458px;
   height: 58px;
-  font-size: 21px;
-  padding-top: 17px;
   background-color: #4a94be;
+  font-size: 19px;
+  padding-top: 4px;
+  text-transform: uppercase;
   font-weight: bold;
+  color: #ffffff;
+  outline: none;
+  border: none;
+
 }
 
 .filter {
