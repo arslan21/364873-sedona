@@ -393,8 +393,8 @@ a {
 }
 
 .arrival-form {
-  margin: 55px;
-  margin-top: 56px;
+  margin: 56px;
+  margin-bottom: 55px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -421,6 +421,11 @@ a {
   font-family: inherit;
 }
 
+.guests:last-of-type {
+  padding-left: 10px;
+  width: 34px;
+}
+
 .date-input,
 .guests-input {
   background-color: #f2f2f2;
@@ -435,7 +440,7 @@ a {
 
 .date-input{
   width: 346px;
-  margin-right: -24px;
+  /*margin-right: -24px;*/
   padding-left: 12px;
 }
 
@@ -471,7 +476,9 @@ a {
 }
 
 .calendar {
-  right: 0px;
+  right: 0%;
+  top: 50%;
+  transform: translate(0%, -50%);
   background-color: transparent;
 }
 
