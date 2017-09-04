@@ -89,7 +89,7 @@ a {
   text-align: left;
   width: 23%;
   padding-top: 14px;
-  padding-bottom: 16px;
+  padding-bottom: 15px;
 }
 
 .nav-item:nth-child(4n-2) {
@@ -100,7 +100,6 @@ a {
 .nav-item:nth-child(4n-1),
 .nav-item:nth-child(4n) {
   text-align: right;
-  color: red;
 }
 
 .main-navigation {
@@ -144,7 +143,7 @@ a {
 
 .welcome {
   height: 507px;
-  background-color: #8d3e58;
+  background-color: #5e8ce0;
   background-image:
     url("../img/white.png"),
     url("../img/background-photo.jpg");
@@ -177,7 +176,7 @@ a {
     vertical-align: baseline;
     font-size: 21px;
     font-weight: bold;
-    margin-bottom: 14px;
+    margin-bottom: 13px;
 }
 
 .preview {
@@ -200,8 +199,8 @@ a {
 .preview-first span,
 .preview-main span {
   display: block;
-  margin-top: 25px;
-  margin-bottom: 23px;
+  margin-top: 24px;
+  margin-bottom: 21px;
 }
 
 .preview-first h2 {
@@ -233,12 +232,12 @@ a {
 }
 
 .preview-other {
-  padding-top: 60px;
+  padding-top: 59px;
   min-height: 330px;
 }
 
 .preview-other .preview-description {
-  padding-top: 8px;
+  padding-top: 7px;
   color: #333333;
 }
 
@@ -279,7 +278,7 @@ a {
   font-size: 30px;
   font-weight: bold;
   line-height: 36px;
-  padding-bottom: 11px;
+  padding-bottom: 10px;
 }
 
 .resume p {
@@ -339,7 +338,7 @@ a {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
-  width: 153px;
+  width: 150px;
   height: 48px;
   margin-left: 30px;
 }
@@ -416,7 +415,7 @@ a {
   align-content: space-between;
   flex-wrap: wrap;
   box-sizing: border-box;
-  height: 173px;
+  height: 172px;
 }
 
 .date,
@@ -448,7 +447,6 @@ a {
 
 .date-input{
   width: 346px;
-  /*margin-right: -24px;*/
   padding-left: 12px;
 }
 
@@ -489,6 +487,8 @@ a {
   top: 50%;
   transform: translate(0%, -50%);
   background-color: transparent;
+  box-sizing: border-box;
+  padding-top: 7px;
 }
 
 .guests-plus {
@@ -542,7 +542,7 @@ a {
 .filter {
   min-height: 217px;
   margin: 0px auto;
-  background-color: #8d3e58;
+  background-color: #5e8ce0;
   background-image: url("../img/background-catalog.jpg");
   background-size: 100%;
   background-position: center;
@@ -571,7 +571,7 @@ a {
 .infrastructure,
 .host-type {
   width: 160px;
-  margin-right: 94px;
+  margin-right: 95px;
   position: relative;
 }
 
@@ -581,7 +581,7 @@ a {
 
 .infrastructure .filter-type,
 .host-type .filter-type {
-  margin-bottom: 24px;
+  margin-bottom: 22px;
 }
 
 .infrastructure label,
@@ -603,11 +603,17 @@ a {
   display: inline-block;
   vertical-align: middle;
   width: 27px;
-  height: 23px;
+  height: 22px;
   background-image: url("../img/checkbox-off.svg");
   background-repeat: no-repeat;
   position: absolute;
   left: 0px;
+}
+
+.infrastructure input:focus ~ label::before,
+.host-type input:focus ~ label::before  {
+  border: 1px dotted #7ab2d3;
+  border-radius: 2px;
 }
 
 .infrastructure input:checked ~ label::before,
