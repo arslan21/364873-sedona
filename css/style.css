@@ -1,6 +1,6 @@
 
 html, body {
-  font-family: "PT Sans", sans-serif;
+  font-family: "PT Sans", "Arial", sans-serif;
   color: #333333;
   background-color: #ffffff;
   font-size: 14px;
@@ -70,6 +70,7 @@ ul {
 a {
   text-decoration: none;
   cursor: pointer;
+  outline: none;
 }
 
 .site-navigation {
@@ -355,7 +356,8 @@ a {
   margin-left: 7px;
 }
 
-.htmlacademy:hover path {
+.htmlacademy:hover path,
+.htmlacademy:focus path {
   fill: #81b3d2;
 }
 
@@ -374,7 +376,8 @@ a {
   align-items: center;
 }
 
-.social-button:hover {
+.social-button:hover,
+.social-button:focus {
   background-color: #669ec0;
 }
 
@@ -459,7 +462,7 @@ a {
 .date-input:focus,
 .guests-input:focus {
   background-color: #ffffff;
-  border: 1px solid #f2f2f2;
+  outline: 1px solid #f2f2f2;
 }
 
 .arrival-form-input div {
@@ -477,6 +480,7 @@ a {
   font-size: 21px;
   font-weight: bold;
   line-height: 26px;
+  cursor: pointer;
   outline: none;
 }
 
@@ -502,11 +506,14 @@ a {
 }
 
 .guests-minus:hover,
-.guests-plus:hover {
+.guests-plus:hover,
+.guests-minus:focus,
+.guests-plus:focus {
   color: #000000;
 }
 
-.calendar:hover path {
+.calendar:hover path,
+.calendar:focus path {
   fill: #000000;
 }
 
@@ -527,9 +534,9 @@ a {
   text-transform: uppercase;
   font-weight: bold;
   color: #ffffff;
-  outline: none;
   border: none;
-
+  cursor: pointer;
+  outline: none;
 }
 
 .filter {
@@ -729,8 +736,8 @@ a {
   outline: none;
 }
 
-.filter-button:hover {
-
+.filter-button:hover,
+.filter-button:focus {
   color: #000000;
   background-color: #ffffff;
 }
@@ -904,12 +911,16 @@ a {
 }
 
 .button-arrival:hover,
-.catalog-item-button-details:hover {
+.button-arrival:focus,
+.catalog-item-button-details:hover,
+.catalog-item-button-details:focus {
   background-color: #669ec0;
 }
 
 .button-search:hover,
-.catalog-item-button-booking:hover {
+.button-search:focus,
+.catalog-item-button-booking:hover,
+.catalog-item-button-booking:focus {
   background-color: #604e43;
 }
 
