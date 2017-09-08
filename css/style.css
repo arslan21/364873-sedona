@@ -277,6 +277,7 @@ a {
   background-image: url("../img/food.png");
   width: 74px;
   height: 76px;
+  transform: translate(-5px, 1px);
 }
 
 .preview-other span.host::before {
@@ -289,6 +290,7 @@ a {
   background-image: url("../img/souvenirs.png");
   width: 64px;
   height: 76px;
+  transform: translateY(-2px);
 }
 
 .resume {
