@@ -695,7 +695,8 @@ a {
   display: inline-block;
   vertical-align: middle;
   width: 27px;
-  height: 23px;
+  height: 24px;
+  border: 1px dotted transparent;
   background-image: url("../img/checkbox-off.svg");
   background-repeat: no-repeat;
   position: absolute;
@@ -704,7 +705,7 @@ a {
 
 .infrastructure input:focus ~ label::before,
 .host-type input:focus ~ label::before  {
-  border: 1px dotted #7ab2d3;
+  border: 1px dotted #4c535d;
   border-radius: 2px;
 }
 
