@@ -103,6 +103,11 @@ a {
           transform: translate(-50%);
 }
 
+.logo:focus {
+  border: 1px dotted #7ab2d3;
+  border-top: none;
+}
+
 .nav-item a {
   color: #000000;
   font-weight: bold;
