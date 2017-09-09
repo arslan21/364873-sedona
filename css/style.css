@@ -237,7 +237,9 @@ a {
 
 .img {
   -ms-flex-item-align: center;
-      align-items: center;
+      -webkit-box-align: center;
+          -ms-flex-align: center;
+              align-items: center;
 }
 
 .preview-main {
@@ -273,7 +275,9 @@ a {
   background-image: url("../img/food.png");
   width: 74px;
   height: 76px;
-  transform: translate(-5px, 1px);
+  -webkit-transform: translate(-5px, 1px);
+      -ms-transform: translate(-5px, 1px);
+          transform: translate(-5px, 1px);
 }
 
 .preview-other span.host::before {
@@ -286,7 +290,9 @@ a {
   background-image: url("../img/souvenirs.png");
   width: 64px;
   height: 76px;
-  transform: translateY(-2px);
+  -webkit-transform: translateY(-2px);
+      -ms-transform: translateY(-2px);
+          transform: translateY(-2px);
 }
 
 .resume {
@@ -328,6 +334,7 @@ a {
 }
 
 .map {
+  position: relative;
   width: 100%;
   height: 593px;
   background-color: #c0e7a9;
@@ -440,8 +447,14 @@ a {
 }
 
 .arrival {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  -webkit-transform: translate(-50%);
+      -ms-transform: translate(-50%);
+          transform: translate(-50%);
   width: 568px;
-  height: 395px;
+  min-height: 395px;
   background-color: #ffffff;
   -webkit-box-shadow: 0 7px 15px rgba(0, 1, 1, 0.15);
           box-shadow: 0 7px 15px rgba(0, 1, 1, 0.15);
@@ -458,6 +471,7 @@ a {
 
 .arrival-form {
   margin: 56px;
+  margin-top: 40px;
   margin-bottom: 55px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -484,13 +498,13 @@ a {
       flex-wrap: wrap;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  min-height: 170px;
-  margin-bottom: 54px;
 }
+
+
 
 .date,
 .guests {
-  display: -webkit-box;
+  /*display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: start;
@@ -498,7 +512,9 @@ a {
           justify-content: flex-start;
   -webkit-box-align: center;
       -ms-flex-align: center;
-          align-items: center;
+          align-items: center;*/
+  -ms-flex-item-align: center;
+      align-self: center;
   color: #000000;
   font-weight: bold;
   font-family: inherit;
@@ -539,7 +555,14 @@ a {
   outline: 1px solid #f2f2f2;
 }
 
-.arrival-form-input div {
+.arrival-form-input .form-input-calendar,
+.form-input-guests {
+  position: relative;
+  margin-bottom: 15px;
+  margin-top: 14px;
+}
+
+.form-input-guests {
   position: relative;
 }
 
@@ -609,6 +632,7 @@ a {
   height: 58px;
   background-color: #81b3d2;
   font-size: 19px;
+  margin-top: 40px;
   padding-top: 4px;
   text-transform: uppercase;
   font-weight: bold;
