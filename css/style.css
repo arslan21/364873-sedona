@@ -607,7 +607,7 @@ a {
 .button-arrival {
   width: 458px;
   height: 58px;
-  background-color: #4a94be;
+  background-color: #81b3d2;
   font-size: 19px;
   margin-top:51px;
   padding-top: 4px;
@@ -1064,13 +1064,13 @@ a {
 .button-arrival:active,
 .catalog-item-button-details:active {
   background-color: #5496bd;
-  opacity: 0.3;
+  color: rgba(255, 255, 255, 0.3);
 }
 
 .button-search:active,
 .catalog-item-button-booking:active {
   background-color: #503e33;
-  opacity: 0.3;
+  color: rgba(255, 255, 255, 0.3);
 }
 
 .rating {
