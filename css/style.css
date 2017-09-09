@@ -226,11 +226,13 @@ a {
       -ms-flex-pack: center;
           justify-content: center;
   overflow: hidden;
+  -ms-flex-item-align: center;
+      align-self: center;
 }
 
 .img {
   -ms-flex-item-align: center;
-      align-self: center;
+      align-items: center;
 }
 
 .preview-main {
