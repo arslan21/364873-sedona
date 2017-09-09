@@ -27,25 +27,6 @@ body {
           box-sizing: inherit;
 }
 
-h1 {
-  font-size: 26px;
-  line-height: 28px;
-  color: #000000;
-}
-
-h2,
-.preview-other span {
-  line-height: 21px;
-  font-size: 21px;
-  font-weight: bold;
-  color: #000000;
-}
-
-h3 {
-  font-size: 21px;
-  font-weight: bold;
-}
-
 img {
   max-width: 100%;
 }
@@ -61,12 +42,6 @@ img {
 	border: 0;
 }
 
-ul {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-
 a {
   text-decoration: none;
   cursor: pointer;
@@ -74,6 +49,9 @@ a {
 }
 
 .site-navigation {
+  list-style: none;
+  margin: 0;
+  padding: 0;
   text-align: left;
   padding-left: 6%;
   padding-right: 6%;
@@ -207,6 +185,14 @@ a {
   -webkit-box-ordinal-group: 2;
       -ms-flex-order: 1;
           order: 1;
+}
+
+.preview h2,
+.preview-other span {
+  line-height: 21px;
+  font-size: 21px;
+  font-weight: bold;
+  color: #000000;
 }
 
 .preview h2 {
@@ -367,6 +353,9 @@ a {
 }
 
 .social {
+  list-style: none;
+  margin: 0;
+  padding: 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -636,6 +625,12 @@ a {
   font-weight: bold;
   line-height: 21px;
   display: inline-block;
+}
+
+.filter-type-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
 }
 
 .filter-hotel {
@@ -1017,6 +1012,8 @@ a {
 .catalog-item-main h3{
   margin: 0;
   line-height: 15px;
+  font-size: 21px;
+  font-weight: bold;
   text-align: left;
 }
 
