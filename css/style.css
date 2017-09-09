@@ -354,13 +354,13 @@ a {
   background-color: #ffffff;
   opacity: 0.9;
   height: 120px;
-  padding-left: 11%;
-  padding-right: 8.4%;
   padding-top: 36px;
   padding-bottom: 36px;
 }
 
-.social-tag {
+.footer__item {
+  width: 33.33%;
+  text-align: center;
   font-size: 21px;
   line-height: 26px;
   font-weight: bold;
@@ -370,30 +370,36 @@ a {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  width: 150px;
   height: 48px;
-  margin-left: 30px;
 }
 
-.website-by {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  width: 197px;
+.social__item {
+  padding-right: 6px;
 }
 
-.htmlacademy {
+.social__item:last-child {
+  padding-right: 0;
+}
+
+.footer__item-website-by p {
+  display: inline-block;
+  vertical-align: middle;
+  font-size: 14px;
+  font-weight: normal;
+  line-height: 26px;
+}
+
+.htmlacademy svg{
+  display: inline-block;
+  vertical-align: middle;
   width: 115px;
   height: 41px;
-  margin-left: 7px;
+  margin-left: 2px;
 }
 
 .htmlacademy:hover path,
